@@ -1,0 +1,28 @@
+.date-field {
+  height: 36px;
+  border-radius: 4px;
+  padding: 0 12px;
+  box-sizing: border-box;
+  outline: none;
+  border: 1px solid #c0c0c0;
+}
+
+input[type="date"].size-s {
+  width: 185px;
+}
+
+input[type="date"].size-m {
+  width: 245px;
+}
+
+input[type="date"].size-l {
+  width: 280px;
+}
+
+input[type="date"].size-xl {
+  width: 470px;
+}
+
+input[type="date"].size-xxl {
+  width: 960px;
+}

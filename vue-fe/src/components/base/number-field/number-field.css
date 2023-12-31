@@ -1,0 +1,32 @@
+.number-field {
+  height: 36px;
+  border-radius: 4px;
+  padding: 0 12px;
+  box-sizing: border-box;
+  outline: none;
+  border: 1px solid var(--border-color-default);
+}
+
+.number-field:focus {
+  border-color: var(--primary-color);
+}
+
+.number-field.size-s {
+  width: 185px;
+}
+
+.number-field.size-m {
+  width: 245px;
+}
+
+.number-field.size-l {
+  width: 280px;
+}
+
+.number-field.size-xl {
+  width: 470px;
+}
+
+.number-field.size-xxl {
+  width: 960px;
+}

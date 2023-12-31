@@ -1,0 +1,42 @@
+.interview-register-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(91, 91, 91, 0.296);
+  z-index: 2;
+}
+
+.interview-register-area {
+  width: 900px;
+  border-radius: 4px;
+  background-color: var(--background-color-default);
+}
+
+.interview-infor {
+  padding-left: 20px;
+  padding-bottom: 20px;
+  box-sizing: border-box;
+}
+
+.interview-register-heading {
+  display: flex;
+  padding: 20px 0;
+  justify-content: center;
+}
+
+.interview-register-footer {
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.custom-result {
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+}

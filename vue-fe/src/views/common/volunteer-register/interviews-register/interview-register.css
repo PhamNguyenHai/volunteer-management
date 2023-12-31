@@ -1,0 +1,35 @@
+.interview-register-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(219, 219, 219, 0.17);
+}
+
+.interview-register-area {
+  width: 900px;
+  border-radius: 4px;
+  background-color: var(--background-color-default);
+}
+
+.student-infor {
+  padding-left: 20px;
+  padding-bottom: 20px;
+  box-sizing: border-box;
+}
+
+.interview-register-heading {
+  display: flex;
+  padding: 20px 0;
+  justify-content: center;
+}
+
+.interview-register-footer {
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-around;
+}

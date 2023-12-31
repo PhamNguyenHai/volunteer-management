@@ -1,0 +1,58 @@
+.main-content:has(.login-area) {
+  background-image: url("/src//assets//img/hinh-thanh-nien-tinh-nguyen.jpg");
+  background-size: contain;
+}
+
+.login-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.login-form {
+  width: 500px;
+  min-height: 350px;
+  border-radius: 4px;
+  background-color: var(--white-color);
+}
+
+.login-form-heading {
+  padding: 30px 0 45px 18px;
+}
+
+.login-infor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 0 20px 0;
+}
+
+.login-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-field + .login-field {
+  margin-top: 35px;
+}
+
+.login-form-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.registering {
+  line-height: 0;
+  display: block;
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+.display-password {
+  padding: 0px 0 20px 16px;
+  box-sizing: border-box;
+}

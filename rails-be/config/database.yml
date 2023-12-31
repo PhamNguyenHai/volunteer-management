@@ -1,0 +1,12 @@
+default: &default
+  adapter: mysql2
+  encoding: utf8mb4
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: admin
+  password: YBdCAc0O
+  host: mysql-158770-0.cloudclusters.net
+  port: 19943
+
+development:
+  <<: *default
+  database: Volunteer_Student_Management

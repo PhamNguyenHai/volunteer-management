@@ -1,0 +1,58 @@
+.user-infor-area {
+  position: relative;
+  background-image: url("/src/assets/img/hinh-tntn.jpg");
+  height: 100%;
+  background-origin: padding-box;
+  background-size: contain;
+  background-position: left;
+}
+
+.user-combo {
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  box-sizing: border-box;
+}
+
+.user-avatar-icon {
+  background-image: url("/src/assets/img/default-avatar.jpg");
+  background-position: center;
+  background-size: contain;
+  height: 100px;
+  width: 100px;
+  float: left;
+}
+
+.user-infor {
+  position: absolute;
+  top: 25%;
+  left: 40%;
+  background-color: rgb(232, 231, 231);
+  width: 500px;
+  height: 300px;
+  border-radius: 4px;
+}
+
+.user-infor-heading {
+  text-align: center;
+  padding: 20px 0;
+  border-radius: 4px;
+  color: rgb(9, 37, 244);
+  background-color: rgb(75, 201, 201);
+}
+
+.infor-item {
+  width: 80px;
+  max-width: 80px;
+}
+
+.item-group {
+  display: flex;
+  align-items: center;
+  padding: 10px 30px;
+  box-sizing: border-box;
+}
+
+.item-group span {
+  font-size: 15px;
+}

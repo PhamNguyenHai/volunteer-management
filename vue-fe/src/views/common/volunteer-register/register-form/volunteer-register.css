@@ -1,0 +1,44 @@
+.main-content:has(.register-area) {
+  background-image: url("/src/assets/img/tntn.jpg");
+  background-size: 50%;
+}
+
+.register-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.register-form {
+  width: 500px;
+  min-height: 390px;
+  border-radius: 4px;
+  background-color: var(--white-color);
+}
+
+.register-form-heading {
+  padding: 20px 0 20px 18px;
+}
+
+.register-infor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 0 40px 0;
+}
+
+.register-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.register-field + .register-field {
+  margin-top: 35px;
+}
+
+.register-form-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
