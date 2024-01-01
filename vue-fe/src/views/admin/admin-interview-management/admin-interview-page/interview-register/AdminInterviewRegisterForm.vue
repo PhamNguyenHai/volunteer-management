@@ -53,7 +53,7 @@
           @click.stop="handleCloseInterviewRegisterForm"
         />
         <misa-button
-          buttonName="Gửi yêu cầu"
+          buttonName="Lưu"
           buttonClass="button primary-button"
           @click.stop="applyInterview"
         />
