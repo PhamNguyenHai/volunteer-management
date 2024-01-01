@@ -40,7 +40,7 @@ export default {
       };
 
       const chartOptions = {
-        indexAxis: "y",
+        // indexAxis: "y",
         responsive: true,
         plugins: {
           legend: {

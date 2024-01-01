@@ -282,8 +282,7 @@ export default {
             this.dialog.type = "warning";
             this.dialog.numberOfButton =
               this.$_MisaEnums.DIALOG_TYPE_BUTTON.TWO_BUTTONS;
-            this.dialog.text =
-              "Bạn có chắc chắn muốn xóa 1 cuộc phỏng vấn không ?";
+            this.dialog.text = "Bạn có chắc chắn muốn xóa 1 hoạt động không ?";
 
             break;
           case this.$_MisaEnums.ROW_MODE.RATING:

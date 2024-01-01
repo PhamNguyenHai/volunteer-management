@@ -46,7 +46,7 @@
       <div class="header-unit-current">
         <div class="header-unit-option"></div>
         <h3 class="header-unit-name">
-          {{ $_MisaResources.appText.headingTitle }}
+          ĐỘI SINH VIÊN TÌNH NGUYỆN ĐẠI HỌC CÔNG NGHIỆP HÀ NỘI
         </h3>
         <div class="header-unit-arrow"></div>
       </div>
