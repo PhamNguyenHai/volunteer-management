@@ -83,29 +83,56 @@ export const convertCamelCaseToPascelCase = (word) => {
   }
 };
 
+// export const countfieldData = (field, data) => {
+//   try {
+//     const fieldCounts = {
+//       labels: [],
+//       counts: [],
+//     };
+
+//     data.forEach((item) => {
+//       const itemValue = item[field];
+
+//       // const itemIndex = findArrayIndexByAttribute(
+//       //   fieldCounts.labels,
+//       //   field,
+//       //   itemValue
+//       // );
+
+//       const itemIndex = fieldCounts.labels.indexOf(itemValue);
+
+//       if (itemIndex !== -1) {
+//         fieldCounts.counts[itemIndex]++;
+//       } else {
+//         fieldCounts.labels.push(itemValue);
+//         fieldCounts.counts.push(1);
+//       }
+//     });
+
+//     return fieldCounts;
+//   } catch (err) {
+//     console.error(err);
+//   }
+// };
+
 export const countfieldData = (field, data) => {
   try {
-    const fieldCounts = {
-      labels: [],
-      counts: [],
-    };
+    const fieldCounts = [];
 
     data.forEach((item) => {
       const itemValue = item[field];
 
-      // const itemIndex = findArrayIndexByAttribute(
-      //   fieldCounts.labels,
-      //   field,
-      //   itemValue
-      // );
-
-      const itemIndex = fieldCounts.labels.indexOf(itemValue);
+      const itemIndex = fieldCounts.findIndex(
+        (item) => item.label === itemValue
+      );
 
       if (itemIndex !== -1) {
-        fieldCounts.counts[itemIndex]++;
+        fieldCounts[itemIndex].data++;
       } else {
-        fieldCounts.labels.push(itemValue);
-        fieldCounts.counts.push(1);
+        fieldCounts.push({
+          label: itemValue,
+          data: 1,
+        });
       }
     });
 

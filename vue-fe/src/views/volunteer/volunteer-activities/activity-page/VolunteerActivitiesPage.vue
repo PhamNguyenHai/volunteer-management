@@ -113,7 +113,7 @@ export default {
 
       filterParams: {
         page: 1,
-        limit: 5,
+        limit: 10,
         search: "",
         sort: "updatedAt",
         order: "desc",

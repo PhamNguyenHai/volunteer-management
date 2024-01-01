@@ -40,3 +40,10 @@
   align-items: center;
   column-gap: 5px;
 }
+
+.interview-infor span {
+  font-size: 14px;
+  display: block;
+  padding: 3px 0;
+  box-sizing: border-box;
+}

@@ -39,3 +39,10 @@
   align-items: center;
   column-gap: 5px;
 }
+
+.activity-infor span {
+  font-size: 15px;
+  display: block;
+  padding: 3px 0;
+  box-sizing: border-box;
+}

@@ -4,19 +4,6 @@
   </div>
   <div class="main-content-center">
     <div class="main-content-functions">
-      <div class="content-left-functions" v-if="isAtLeastOneRowSelected">
-        <span>
-          Đã chọn
-          <b class="selected-row-number"> {{ selectedRowIds.length }} </b>
-        </span>
-        <span class="unselectd-all">Bỏ chọn</span>
-        <misa-button
-          buttonName="Xóa tất cả"
-          buttonClass="delete-button primary-button"
-          @click.stop="onClickDeleteMany"
-        />
-      </div>
-
       <div class="content-right-functions">
         <misa-text-field
           textFieldClass="searching-function text-field"

@@ -39,7 +39,7 @@ export default {
         chartTitle: "Thống kê sinh viên từ các lớp",
         dataForChart: {
           labels: [],
-          counts: [],
+          data: [],
         },
         chartType: "doughnut",
         chartSize: { width: 400, height: 400 },
@@ -49,7 +49,7 @@ export default {
         chartTitle: "Thống kê kinh phí cho hoạt động",
         dataForChart: {
           labels: [],
-          counts: [],
+          data: [],
         },
         chartType: "line",
         chartSize: { width: 400, height: 400 },
@@ -59,7 +59,7 @@ export default {
         chartTitle: "Thống kê số lượng người tham gia hoạt động",
         dataForChart: {
           labels: [],
-          counts: [],
+          data: [],
         },
         chartType: "bar",
         chartSize: { width: 400, height: 400 },
@@ -109,9 +109,13 @@ export default {
       if (res.success) {
         const data = res.data.data.listData;
         const countFields = countfieldData("className", data);
-        this.studentData.dataForChart = countFields;
+        countFields.sort((a, b) => b.data - a.data);
+        const statisticalData = {};
 
-        console.log(this.studentData);
+        statisticalData.labels = countFields.map((item) => item.label);
+        statisticalData.data = countFields.map((item) => item.data);
+
+        this.studentData.dataForChart = statisticalData;
       }
     },
 
@@ -122,7 +126,7 @@ export default {
         const statisticalData = {};
 
         statisticalData.labels = data.map((item) => item.activityName);
-        statisticalData.counts = data.map((item) => item.supportMoney);
+        statisticalData.data = data.map((item) => item.supportMoney);
 
         this.activityCostData.dataForChart = statisticalData;
       }
@@ -135,7 +139,7 @@ export default {
         const statisticalData = {};
 
         statisticalData.labels = data.map((item) => item.activityName);
-        statisticalData.counts = data.map((item) => item.numOfParticipant);
+        statisticalData.data = data.map((item) => item.numOfParticipant);
 
         this.activityNumberOfMemberData.dataForChart = statisticalData;
       }

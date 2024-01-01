@@ -4,9 +4,9 @@
       <h2 class="interview-register-heading">Thông tin đăng ký phỏng vấn</h2>
 
       <div class="student-infor">
-        <h3 class="student-code">Mã SV: {{ studentInfor.studentCode }}</h3>
-        <h3 class="student-name">Họ Tên: {{ studentInfor.studentName }}</h3>
-        <h3 class="student-class">Lớp: {{ studentInfor.className }}</h3>
+        <span class="student-code">Mã SV: {{ studentInfor.studentCode }}</span>
+        <span class="student-name">Họ Tên: {{ studentInfor.studentName }}</span>
+        <span class="student-class">Lớp: {{ studentInfor.className }}</span>
       </div>
 
       <misa-table
@@ -80,7 +80,7 @@ export default {
 
       filterParams: {
         page: 1,
-        limit: 5,
+        limit: 10,
         search: "",
         sort: "updatedAt",
         order: "desc",

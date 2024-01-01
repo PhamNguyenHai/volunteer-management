@@ -34,13 +34,19 @@ export default {
         labels: this.dataForChart.labels,
         datasets: [
           {
-            data: this.dataForChart.counts,
+            data: this.dataForChart.data,
           },
         ],
       };
 
       const chartOptions = {
-        responsive: false,
+        indexAxis: "y",
+        responsive: true,
+        plugins: {
+          legend: {
+            display: false,
+          },
+        },
       };
 
       new Chart(this.$refs.chartCanvas, {

@@ -33,3 +33,9 @@
   display: flex;
   justify-content: space-around;
 }
+
+.student-infor span {
+  display: flex;
+  font-size: 14px;
+  padding: 3px 0;
+}

@@ -5,26 +5,26 @@
 
       <div class="activity-infor">
         <div class="activity-infor-left">
-          <h3 class="activity-code">
+          <span class="activity-code">
             Mã họat động: {{ activityInfor.activityCode }}
-          </h3>
-          <h3 class="activity-name">
+          </span>
+          <span class="activity-name">
             Tên hoạt động: {{ activityInfor.activityName }}
-          </h3>
-          <h3 class="activity-begining-date">
+          </span>
+          <span class="activity-begining-date">
             Ngày bắt đầu: {{ activityInfor.beginingDate }}
-          </h3>
+          </span>
         </div>
         <div class="activity-infor-right">
-          <h3 class="activity-manager">
+          <span class="activity-manager">
             Người quản lý: {{ activityInfor.manager }}
-          </h3>
-          <h3 class="activity-support-money">
+          </span>
+          <span class="activity-support-money">
             Kinh phí hỗ trợ: {{ activityInfor.supportMoney }}
-          </h3>
-          <h3 class="activity-description">
+          </span>
+          <span class="activity-description">
             Mô tả: {{ activityInfor.description }}
-          </h3>
+          </span>
         </div>
       </div>
       <h3>Số lượng thành viên tham gia: {{ inActivityMembersNumber }}</h3>
@@ -98,7 +98,7 @@ export default {
 
       filterParams: {
         page: 1,
-        limit: 5,
+        limit: 10,
         search: "",
         sort: "updatedAt",
         order: "desc",

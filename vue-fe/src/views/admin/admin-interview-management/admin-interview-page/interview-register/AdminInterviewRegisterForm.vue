@@ -4,15 +4,15 @@
       <h2 class="interview-register-heading">Thông tin đơn đăng ký</h2>
 
       <div class="interview-infor">
-        <h3 class="interview-code">
+        <span class="interview-code">
           Mã phỏng vấn: {{ interviewInfor.interviewCode }}
-        </h3>
-        <h3 class="interview-name">
+        </span>
+        <span class="interview-name">
           Ngày phỏng vấn: {{ interviewInfor.interviewDate }}
-        </h3>
-        <h3 class="interview-class">
+        </span>
+        <span class="interview-class">
           Phòng phỏng vấn: {{ interviewInfor.interviewRoom }}
-        </h3>
+        </span>
       </div>
 
       <misa-table
@@ -85,7 +85,7 @@ export default {
 
       filterParams: {
         page: 1,
-        limit: 5,
+        limit: 10,
         search: "",
         sort: "updatedAt",
         order: "desc",
