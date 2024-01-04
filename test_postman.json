@@ -1,0 +1,1455 @@
+{
+	"info": {
+		"_postman_id": "535d58c2-b39c-48a8-928d-e5ad74820683",
+		"name": "API_MNM",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23152853",
+		"_collection_link": "https://planetary-trinity-131069.postman.co/workspace/New-Team-Workspace~4743487d-ceec-440b-9fa6-ce4c0ebadc1b/collection/18631516-535d58c2-b39c-48a8-928d-e5ad74820683?action=share&source=collection_link&creator=23152853"
+	},
+	"item": [
+		{
+			"name": "Student",
+			"item": [
+				{
+					"name": "Get all students (ad)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJleHAiOjE3MDM0MDk4MzUsImFsZyI6IkhTMjU2In0.eyJ1c2VyTmFtZSI6IkFETUlOIiwiYWNjb3VudENvZGUiOjEsInN0dWRlbnRDb2RlIjpudWxsLCJuYW1lIjoiYWRtaW4iLCJyb2xlIjp0cnVlfQ.-7p7KXC39itfuvj29CroZJyxHke_2LFKp6JJb1pTj9M",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "sort",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "order",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "limit",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/students/admin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"students",
+								"admin"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "2",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a student by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/students/SV01",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"students",
+								"SV01"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Seach info student",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "studentCode",
+									"value": "SV04",
+									"type": "text"
+								},
+								{
+									"key": "studentName",
+									"value": "Đào Thảo",
+									"type": "text"
+								},
+								{
+									"key": "className",
+									"value": "HTTT01",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/students/search",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"students",
+								"search"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJleHAiOjE3MDMzOTk5MTEsImFsZyI6IkhTMjU2In0.eyJ1c2VyTmFtZSI6IkFETUlOIiwiYWNjb3VudENvZGUiOjEsInN0dWRlbnRDb2RlIjpudWxsLCJuYW1lIjoiYWRtaW4iLCJyb2xlIjp0cnVlfQ.dUztQUA8dPidThD0vGZuJzPmKBszpnornW6ojz8tusQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/auth/logout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Refresh token",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/auth/refresh",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"refresh"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Student_Interview",
+			"item": [
+				{
+					"name": "Apply interview",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJleHAiOjE3MDQwMzgxNTgsImFsZyI6IkhTMjU2In0.eyJ1c2VyTmFtZSI6ImFkbWluIiwiYWNjb3VudENvZGUiOjEsInN0dWRlbnRDb2RlIjpudWxsLCJuYW1lIjoiYWRtaW4iLCJyb2xlIjp0cnVlfQ.wQTm7oNwibsf2X3wUhZWSrGDxPs3CcJkSaSYGTRRjtk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "studentCode",
+									"value": "SV056",
+									"type": "text"
+								},
+								{
+									"key": "interviewCode",
+									"value": "212",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/student_interview",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"student_interview"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update result interview (ad)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJleHAiOjE3MDM1Mjg3NzEsImFsZyI6IkhTMjU2In0.eyJ1c2VyTmFtZSI6IkFETUlOIiwiYWNjb3VudENvZGUiOjEsInN0dWRlbnRDb2RlIjpudWxsLCJuYW1lIjoiYWRtaW4iLCJyb2xlIjp0cnVlfQ.iMCdoMWXx_rOeBAKI67BthqGqwCSUi4Oikn4cENDGN0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"resultInterview\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/student_interview/admin/SV04",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"student_interview",
+								"admin",
+								"SV04"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all student_interview (ad)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJleHAiOjE3MDM1MjY2MjIsImFsZyI6IkhTMjU2In0.eyJ1c2VyTmFtZSI6IkFETUlOIiwiYWNjb3VudENvZGUiOjEsInN0dWRlbnRDb2RlIjpudWxsLCJuYW1lIjoiYWRtaW4iLCJyb2xlIjp0cnVlfQ.sHovVa4JQ8_cLIzCih38z0HqvitTBu-iadnZl4suz04",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/student_interview/admin?sort=studentCode",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"student_interview",
+								"admin"
+							],
+							"query": [
+								{
+									"key": "order",
+									"value": "asc",
+									"disabled": true
+								},
+								{
+									"key": "limit",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "search",
+									"value": "Thảo",
+									"disabled": true
+								},
+								{
+									"key": "1",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "sort",
+									"value": "studentCode"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get student by interview (ad)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJleHAiOjE3MDM1MjkxMDMsImFsZyI6IkhTMjU2In0.eyJ1c2VyTmFtZSI6IkFETUlOIiwiYWNjb3VudENvZGUiOjEsInN0dWRlbnRDb2RlIjpudWxsLCJuYW1lIjoiYWRtaW4iLCJyb2xlIjp0cnVlfQ.6tKXqbTZzCLpL_WZrkIAVAWFbTdkrwy4jS2MwM-npps",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/student_interview/admin/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"student_interview",
+								"admin",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Interview",
+			"item": [
+				{
+					"name": "Get all interviews (ad)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJleHAiOjE3MDM4Nzk0ODgsImFsZyI6IkhTMjU2In0.eyJ1c2VyTmFtZSI6IkFETUlOIiwiYWNjb3VudENvZGUiOjEsInN0dWRlbnRDb2RlIjpudWxsLCJuYW1lIjoiYWRtaW4iLCJyb2xlIjp0cnVlfQ.M6N92-NcbQm1AUuzVubt80XgIRu3vtef5xKihjonHeI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/interviews/admin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"interviews",
+								"admin"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "5",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "0",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all interviews",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/interviews?search=12",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"interviews"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "12"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Soft delete arr interview (ad)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJleHAiOjE3MDM5NDA1NzksImFsZyI6IkhTMjU2In0.eyJ1c2VyTmFtZSI6IkFETUlOIiwiYWNjb3VudENvZGUiOjEsInN0dWRlbnRDb2RlIjpudWxsLCJuYW1lIjoiYWRtaW4iLCJyb2xlIjp0cnVlfQ.MbmZR5eZQSoDOJ1e8GBbDvJq0cwkZoZXdnPBGBlGS3w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    message\r\n: \r\n\"undefined method `each' for nil:NilClass\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/interviews/admin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"interviews",
+								"admin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update a interview (ad)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJleHAiOjE3MDM5NjEyMTQsImFsZyI6IkhTMjU2In0.eyJ1c2VyTmFtZSI6IkFETUlOIiwiYWNjb3VudENvZGUiOjEsInN0dWRlbnRDb2RlIjpudWxsLCJuYW1lIjoiYWRtaW4iLCJyb2xlIjp0cnVlfQ.STtkNKSAyhBB-sHzcXmx0kpUDZzH2eUS0GqbOpVThBE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "interviewDate",
+									"value": "2023-12-01",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "quantityMax",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "deletedAt",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "interviewRoom",
+									"value": "123",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/interviews/admin/23",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"interviews",
+								"admin",
+								"23"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create a interview (ad)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJleHAiOjE3MDMzMzE4NDcsImFsZyI6IkhTMjU2In0.eyJ1c2VyTmFtZSI6IkFETUlOIiwiYWNjb3VudENvZGUiOjEsInN0dWRlbnRDb2RlIjpudWxsLCJuYW1lIjoiYWRtaW4iLCJyb2xlIjp0cnVlfQ.bugagXCSA6OVmTfXwUtqcMDCEK3ZqSn3lgzU1x9kRN0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "interviewDate",
+									"value": "2023-",
+									"type": "text"
+								},
+								{
+									"key": "interviewRoom",
+									"value": "101 - A7",
+									"type": "text"
+								},
+								{
+									"key": "quantityMax",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "quantity",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/interviews/admin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"interviews",
+								"admin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Soft delete a interview (ad)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJleHAiOjE3MDM5NTI1OTksImFsZyI6IkhTMjU2In0.eyJ1c2VyTmFtZSI6IkFETUlOIiwiYWNjb3VudENvZGUiOjEsInN0dWRlbnRDb2RlIjpudWxsLCJuYW1lIjoiYWRtaW4iLCJyb2xlIjp0cnVlfQ.nOt4kt2QQG1hVVREQTY9aNoeacZ3Ixg6iHePsjCPTjE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/interviews/admin/10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"interviews",
+								"admin",
+								"10"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Student Volunteer",
+			"item": [
+				{
+					"name": "Get all student volunteer (ad)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJleHAiOjE3MDM4NzQ5MzksImFsZyI6IkhTMjU2In0.eyJ1c2VyTmFtZSI6IkFETUlOIiwiYWNjb3VudENvZGUiOjEsInN0dWRlbnRDb2RlIjpudWxsLCJuYW1lIjoiYWRtaW4iLCJyb2xlIjp0cnVlfQ.5X2Qrau1_Ey12RsqzW44qqY_F_JpfkRzVoiJOCU6GJo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/volunteers/admin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"volunteers",
+								"admin"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "Anh",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete arr student volunteer (ad)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJleHAiOjE3MDM4ODExNTksImFsZyI6IkhTMjU2In0.eyJ1c2VyTmFtZSI6IkFETUlOIiwiYWNjb3VudENvZGUiOjEsInN0dWRlbnRDb2RlIjpudWxsLCJuYW1lIjoiYWRtaW4iLCJyb2xlIjp0cnVlfQ.SyAbRSoO71lQ_qkgOHGPfW7gZYCahU6-IXiOQX1GRe0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"studentCode\": []\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/volunteers/admin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"volunteers",
+								"admin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a student volunteer (ad)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJleHAiOjE3MDM5NTI1OTksImFsZyI6IkhTMjU2In0.eyJ1c2VyTmFtZSI6IkFETUlOIiwiYWNjb3VudENvZGUiOjEsInN0dWRlbnRDb2RlIjpudWxsLCJuYW1lIjoiYWRtaW4iLCJyb2xlIjp0cnVlfQ.nOt4kt2QQG1hVVREQTY9aNoeacZ3Ixg6iHePsjCPTjE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/volunteers/admin/SV0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"volunteers",
+								"admin",
+								"SV0"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Activity",
+			"item": [
+				{
+					"name": "Get all activities (ad)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJleHAiOjE3MDM4Nzk0ODgsImFsZyI6IkhTMjU2In0.eyJ1c2VyTmFtZSI6IkFETUlOIiwiYWNjb3VudENvZGUiOjEsInN0dWRlbnRDb2RlIjpudWxsLCJuYW1lIjoiYWRtaW4iLCJyb2xlIjp0cnVlfQ.M6N92-NcbQm1AUuzVubt80XgIRu3vtef5xKihjonHeI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/activities/admin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"activities",
+								"admin"
+							],
+							"query": [
+								{
+									"key": "sort",
+									"value": "updatedAt",
+									"disabled": true
+								},
+								{
+									"key": "order",
+									"value": "desc",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "limit",
+									"value": "5",
+									"disabled": true
+								},
+								{
+									"key": "search",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete arr activity (ad)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJleHAiOjE3MDM5NTI1OTksImFsZyI6IkhTMjU2In0.eyJ1c2VyTmFtZSI6IkFETUlOIiwiYWNjb3VudENvZGUiOjEsInN0dWRlbnRDb2RlIjpudWxsLCJuYW1lIjoiYWRtaW4iLCJyb2xlIjp0cnVlfQ.nOt4kt2QQG1hVVREQTY9aNoeacZ3Ixg6iHePsjCPTjE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"activityCode\": [\"4\", \"5\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/activities/admin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"activities",
+								"admin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a activity (ad)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJleHAiOjE3MDM5NTI1OTksImFsZyI6IkhTMjU2In0.eyJ1c2VyTmFtZSI6IkFETUlOIiwiYWNjb3VudENvZGUiOjEsInN0dWRlbnRDb2RlIjpudWxsLCJuYW1lIjoiYWRtaW4iLCJyb2xlIjp0cnVlfQ.nOt4kt2QQG1hVVREQTY9aNoeacZ3Ixg6iHePsjCPTjE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/activities/admin/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"activities",
+								"admin",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update a activity (ad)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJleHAiOjE3MDM3MDAwMTIsImFsZyI6IkhTMjU2In0.eyJ1c2VyTmFtZSI6IlNWMDEiLCJhY2NvdW50Q29kZSI6MTcsInN0dWRlbnRDb2RlIjoiU1YwMSIsIm5hbWUiOiJOZ3V54buFbiBNaW5oIEFuaCIsInJvbGUiOmZhbHNlfQ.LIEw4DQrPSqEe2i2jKgQtFp2dm37DxyRPCh-Wt3HbtY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "beginingDate",
+									"value": "2023-12-21",
+									"type": "text"
+								},
+								{
+									"key": "activityName",
+									"value": "Noel cho người độc thân :((",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/activities/admin/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"activities",
+								"admin",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create a activity (ad)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJleHAiOjE3MDM3MDAwMTIsImFsZyI6IkhTMjU2In0.eyJ1c2VyTmFtZSI6IlNWMDEiLCJhY2NvdW50Q29kZSI6MTcsInN0dWRlbnRDb2RlIjoiU1YwMSIsIm5hbWUiOiJOZ3V54buFbiBNaW5oIEFuaCIsInJvbGUiOmZhbHNlfQ.LIEw4DQrPSqEe2i2jKgQtFp2dm37DxyRPCh-Wt3HbtY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "activityName",
+									"value": "Tuổi trẻ sinh viên",
+									"type": "text"
+								},
+								{
+									"key": "beginingDate",
+									"value": "2023-1-11",
+									"type": "text"
+								},
+								{
+									"key": "manager",
+									"value": "Phạm Nguyễn Nguyên Hải",
+									"type": "text"
+								},
+								{
+									"key": "supportMoney",
+									"value": "145.678",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/activities/admin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"activities",
+								"admin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a activity by id (ad)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJleHAiOjE3MDMzNDM2MzMsImFsZyI6IkhTMjU2In0.eyJ1c2VyTmFtZSI6IkFETUlOIiwiYWNjb3VudENvZGUiOjEsInN0dWRlbnRDb2RlIjpudWxsLCJuYW1lIjoiYWRtaW4iLCJyb2xlIjp0cnVlfQ.zbqVKTO2PpxEzYQ8SdcSB2m-45c8K8SxI67Fdsb4rFI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/activities/admin/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"activities",
+								"admin",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all activities by student (student)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJleHAiOjE3MDM4NjkwNDQsImFsZyI6IkhTMjU2In0.eyJ1c2VyTmFtZSI6IkFETUlOIiwiYWNjb3VudENvZGUiOjEsInN0dWRlbnRDb2RlIjpudWxsLCJuYW1lIjoiYWRtaW4iLCJyb2xlIjp0cnVlfQ.VVgKjB93prV1Rha53eFdeByXimJjcANeETVUC6eXbCI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/activities/SV01",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"activities",
+								"SV01"
+							],
+							"query": [
+								{
+									"key": "sort",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Export file",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/activities/admin/export",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"activities",
+								"admin",
+								"export"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/v1/activities/admin/export",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"activities",
+										"admin",
+										"export"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "raw",
+							"header": [
+								{
+									"key": "x-frame-options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "x-xss-protection",
+									"value": "0"
+								},
+								{
+									"key": "x-content-type-options",
+									"value": "nosniff"
+								},
+								{
+									"key": "x-permitted-cross-domain-policies",
+									"value": "none"
+								},
+								{
+									"key": "referrer-policy",
+									"value": "strict-origin-when-cross-origin"
+								},
+								{
+									"key": "content-type",
+									"value": "application/vnd.ms-excel"
+								},
+								{
+									"key": "content-disposition",
+									"value": "attachment; filename=\"Danh sach hoat dong.xls\"; filename*=UTF-8''Danh%20s%C3%A1ch%20ho%E1%BA%A1t%20%C4%91%E1%BB%99ng.xls"
+								},
+								{
+									"key": "content-transfer-encoding",
+									"value": "binary"
+								},
+								{
+									"key": "vary",
+									"value": "Accept, Origin"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"3413a640eacd97f369012996ad905b66\""
+								},
+								{
+									"key": "cache-control",
+									"value": "max-age=0, private, must-revalidate"
+								},
+								{
+									"key": "x-request-id",
+									"value": "bb4b5fee-bb66-4b2a-9f06-2f1627b9f306"
+								},
+								{
+									"key": "x-runtime",
+									"value": "1.285803"
+								},
+								{
+									"key": "server-timing",
+									"value": "start_processing.action_controller;dur=0.01, sql.active_record;dur=277.16, instantiation.active_record;dur=0.18, send_data.action_controller;dur=0.44, process_action.action_controller;dur=1101.59"
+								},
+								{
+									"key": "Content-Length",
+									"value": "4608"
+								}
+							],
+							"cookie": [],
+							"body": "��\u0011ࡱ\u001a�\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000;\u0000\u0003\u0000��\t\u0000\u0006\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u0005\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0010\u0000\u0000\u0006\u0000\u0000\u0000\u0001\u0000\u0000\u0000����\u0000\u0000\u0000\u0000\u0007\u0000\u0000\u0000������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������\t\b\u0010\u0000\u0000\u0006\u0005\u0000�\r�\u0007\u0000\u0000\u0000\u0000\u0006\u0000\u0000\u0000B\u0000\u0002\u0000�\u0004a\u0001\u0002\u0000\u0000\u0000=\u0001\u0002\u0000\u0001\u0000\u0012\u0000\u0002\u0000\u0000\u0000\u0013\u0000\u0002\u0000\u0000\u0000=\u0000\u0012\u0000\u0000\u0000\u0000\u0000\u0000@\u0000 8\u0000\u0000\u0000\u0000\u0000\u0001\u0000�\u0000\"\u0000\u0002\u0000\u0000\u0000\u000e\u0000\u0002\u0000\u0001\u0000�\u0001\u0002\u0000\u0000\u0000�\u0000\u0002\u0000\u0000\u00001\u0000\u0015\u0000�\u0000\u0000\u0000��\u0001\u0000\u0000\u0000\u0002\u0001\u0000\u0005\u0000Arial\u001e\u0004\f\u0000�\u0000\u0007\u0000\u0000GENERAL\u001e\u0004\u000f\u0000�\u0000\n\u0000\u0000DD.MM.YYYY�\u0000\u0014\u0000\u0000\u0000�\u0000�� \u0000\u0000 \u0000\u0000\b\u0004\b\u0004\u0002\u0000� �\u0000\u0014\u0000\u0000\u0000�\u0000�� \u0000\u0000 \u0000\u0000\b\u0004\b\u0004\u0002\u0000� �\u0000\u0014\u0000\u0000\u0000�\u0000�� \u0000\u0000 \u0000\u0000\b\u0004\b\u0004\u0002\u0000� �\u0000\u0014\u0000\u0000\u0000�\u0000�� \u0000\u0000 \u0000\u0000\b\u0004\b\u0004\u0002\u0000� �\u0000\u0014\u0000\u0000\u0000�\u0000�� \u0000\u0000 \u0000\u0000\b\u0004\b\u0004\u0002\u0000� �\u0000\u0014\u0000\u0000\u0000�\u0000�� \u0000\u0000 \u0000\u0000\b\u0004\b\u0004\u0002\u0000� �\u0000\u0014\u0000\u0000\u0000�\u0000�� \u0000\u0000 \u0000\u0000\b\u0004\b\u0004\u0002\u0000� �\u0000\u0014\u0000\u0000\u0000�\u0000�� \u0000\u0000 \u0000\u0000\b\u0004\b\u0004\u0002\u0000� �\u0000\u0014\u0000\u0000\u0000�\u0000�� \u0000\u0000 \u0000\u0000\b\u0004\b\u0004\u0002\u0000� �\u0000\u0014\u0000\u0000\u0000�\u0000�� \u0000\u0000 \u0000\u0000\b\u0004\b\u0004\u0002\u0000� �\u0000\u0014\u0000\u0000\u0000�\u0000�� \u0000\u0000 \u0000\u0000\b\u0004\b\u0004\u0002\u0000� �\u0000\u0014\u0000\u0000\u0000�\u0000�� \u0000\u0000 \u0000\u0000\b\u0004\b\u0004\u0002\u0000� �\u0000\u0014\u0000\u0000\u0000�\u0000�� \u0000\u0000 \u0000\u0000\b\u0004\b\u0004\u0002\u0000� �\u0000\u0014\u0000\u0000\u0000�\u0000�� \u0000\u0000 \u0000\u0000\b\u0004\b\u0004\u0002\u0000� �\u0000\u0014\u0000\u0000\u0000�\u0000�� \u0000\u0000 \u0000\u0000\b\u0004\b\u0004\u0002\u0000� �\u0000\u0014\u0000\u0000\u0000�\u0000\u0000\u0000 \u0000\u0000 \u0000\u0000\b\u0004\b\u0004\u0002\u0000� �\u0000\u0014\u0000\u0000\u0000�\u0000\u0000\u0000 \u0000\u0000 \u0000\u0000\b\u0004\b\u0004\u0002\u0000� �\u0000\u0014\u0000\u0000\u0000�\u0000\u0000\u0000 \u0000\u0000$\u0000\u0000\b\u0004\b\u0004\u0002\u0000� �\u0002\u0004\u0000\u0000�\u0000��\u0000�\u00008\u0000\u0000\u0000\u0000\u0000���\u0000�\u0000\u0000\u0000\u0000�\u0000\u0000\u0000\u0000�\u0000��\u0000\u0000�\u0000�\u0000\u0000��\u0000�\u0000\u0000\u0000\u0000�\u0000\u0000\u0000\u0000�\u0000��\u0000\u0000�\u0000�\u0000\u0000��\u0000���\u0000���\u0000���\u0000�3f\u0000���\u0000���\u0000f\u0000f\u0000���\u0000\u0000f�\u0000���\u0000\u0000\u0000�\u0000�\u0000�\u0000��\u0000\u0000\u0000��\u0000�\u0000�\u0000�\u0000\u0000\u0000\u0000��\u0000\u0000\u0000�\u0000\u0000��\u0000���\u0000���\u0000���\u0000���\u0000���\u0000̙�\u0000�̙\u00003f�\u00003��\u0000��\u0000\u0000��\u0000\u0000��\u0000\u0000�f\u0000\u0000ff�\u0000���\u0000\u00003f\u00003�f\u0000\u00003\u0000\u000033\u0000\u0000�3\u0000\u0000�3f\u000033�\u0000333\u0000�\u0000\u000e\u0000�\u0005\u0000\u0000\u0000\u0000\u0006\u0000Sheet1�\u0000�\u0002\u0012\u0000\u0000\u0000\u0011\u0000\u0000\u0000\f\u0000\u0001M\u0000�\u0000_\u0000h\u0000o\u0000�\u001et\u0000_\u0000\u0011\u0001�\u001en\u0000g\u0000\r\u0000\u0001T\u0000�\u0000n\u0000_\u0000h\u0000o\u0000�\u001et\u0000_\u0000\u0011\u0001�\u001en\u0000g\u0000\f\u0000\u0001N\u0000g\u0000�\u0000y\u0000_\u0000b\u0000�\u001et\u0000_\u0000\u0011\u0001�\u001eu\u0000\r\u0000\u0001N\u0000g\u0000�\u0001�\u001ei\u0000_\u0000q\u0000u\u0000�\u001en\u0000_\u0000l\u0000�\u0000\u000e\u0000\u0001C\u0000h\u0000i\u0000_\u0000p\u0000h\u0000�\u0000_\u0000h\u0000�\u001e_\u0000t\u0000r\u0000�\u001e\u0005\u0000\u0001M\u0000�\u0000_\u0000t\u0000�\u001e\b\u0000\u0001N\u0000g\u0000�\u0000y\u0000_\u0000t\u0000�\u001eo\u0000\u0013\u0000\u0001\u0010\u0001�\u0000n\u0000h\u0000_\u0000g\u0000i\u0000�\u0000_\u0000t\u0000r\u0000u\u0000n\u0000g\u0000_\u0000b\u0000�\u0000n\u0000h\u0000\u0011\u0000\u0001S\u0000�\u001e_\u0000n\u0000g\u0000�\u0001�\u001ei\u0000_\u0000t\u0000h\u0000a\u0000m\u0000_\u0000g\u0000i\u0000a\u0000\u001b\u0000\u0001N\u0000o\u0000e\u0000l\u0000 \u0000c\u0000h\u0000o\u0000 \u0000n\u0000g\u0000�\u0001�\u001ei\u0000 \u0000\u0011\u0001�\u001ec\u0000 \u0000t\u0000h\u0000�\u0000n\u0000 \u0000:\u0000)\u0000)\u0000\u000e\u0000\u0001L\u0000�\u0001u\u0000 \u0000T\u0000u\u0000�\u001en\u0000 \u0000T\u0000h\u0000�\u0000n\u0000h\u00004\u0000\u0001T\u0000�\u001eo\u0000 \u0000n\u0000h\u0000�\u0000m\u0000 \u0000v\u0000u\u0000i\u0000 \u0000c\u0000h\u0000�\u0001i\u0000 \u0000c\u0000h\u0000o\u0000 \u0000n\u0000g\u0000�\u0001�\u001ei\u0000 \u0000\u0011\u0001�\u001ec\u0000 \u0000t\u0000h\u0000�\u0000n\u0000 \u0000t\u0000r\u0000o\u0000n\u0000g\u0000 \u0000n\u0000g\u0000�\u0000y\u0000 \u0000n\u0000o\u0000e\u0000l\u0000\u0012\u0000\u0001T\u0000u\u0000�\u001ei\u0000 \u0000t\u0000r\u0000�\u001e \u0000s\u0000i\u0000n\u0000h\u0000 \u0000v\u0000i\u0000�\u0000n\u0000\u0016\u0000\u0001P\u0000h\u0000�\u001em\u0000 \u0000N\u0000g\u0000u\u0000y\u0000�\u001en\u0000 \u0000N\u0000g\u0000u\u0000y\u0000�\u0000n\u0000 \u0000H\u0000�\u001ei\u0000\f\u0000\u0001\u0010\u0001�\u0000y\u0000 \u0000l\u0000�\u0000 \u0000m\u0000�\u0000 \u0000t\u0000�\u001e\b\u0000\u0001\u0010\u0001�\u0000o\u0000 \u0000v\u0000�\u0000n\u0000g\u0000 \u0000\u0001\u0010\u0001�\u0000o\u0000 \u0000t\u0000h\u0000�\u001et\u0000 \u0000n\u0000h\u0000i\u0000�\u001eu\u0000 \u0000v\u0000�\u0000n\u0000g\u0000 \u0000v\u0000�\u0000 \u0000k\u0000i\u0000m\u0000 \u0000c\u0000�\u0001�\u0001n\u0000g\u0000�\u0000\n\u0000\u0014\u0000X\u0003\u0000\u0000\f\u0000\u0000\u0000\n\u0000\u0000\u0000\t\b\u0010\u0000\u0000\u0006\u0010\u0000�\r�\u0007\u0000\u0000\u0000\u0000\u0006\u0000\u0000\u0000\f\u0000\u0002\u0000d\u0000\u000f\u0000\u0002\u0000\u0001\u0000\u0011\u0000\u0002\u0000\u0000\u0000_\u0000\u0002\u0000\u0001\u0000�\u0000\b\u0000\u0000\u0000\u0000\u0000\u0001\u0000\u0001\u0000%\u0002\u0004\u0000\u0000\u0000�\u0000�\u0000\u0002\u0000�\u0004U\u0000\u0002\u0000\b\u0000}\u0000\f\u0000\u0000\u0000\b\u0000\u0000\n\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0002\u000e\u0000\u0000\u0000\u0000\u0000\u0004\u0000\u0000\u0000\u0000\u0000\t\u0000\u0000\u0000\b\u0002\u0010\u0000\u0000\u0000\u0000\u0000\t\u0000�\u0000\u0000\u0000\u0000�\u0001\u0000\u0000\b\u0002\u0010\u0000\u0001\u0000\u0000\u0000\t\u0000�\u0000\u0000\u0000\u0000�\u0001\u0000\u0000\b\u0002\u0010\u0000\u0002\u0000\u0000\u0000\t\u0000�\u0000\u0000\u0000\u0000�\u0001\u0000\u0000\b\u0002\u0010\u0000\u0003\u0000\u0000\u0000\t\u0000�\u0000\u0000\u0000\u0000�\u0001\u0000\u0000�\u0000\n\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000�\u0000\n\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u0001\u0000\u0000\u0000�\u0000\n\u0000\u0000\u0000\u0002\u0000\u0000\u0000\u0002\u0000\u0000\u0000�\u0000\n\u0000\u0000\u0000\u0003\u0000\u0000\u0000\u0003\u0000\u0000\u0000�\u0000\n\u0000\u0000\u0000\u0004\u0000\u0000\u0000\u0004\u0000\u0000\u0000�\u0000\n\u0000\u0000\u0000\u0005\u0000\u0000\u0000\u0005\u0000\u0000\u0000�\u0000\n\u0000\u0000\u0000\u0006\u0000\u0000\u0000\u0006\u0000\u0000\u0000�\u0000\n\u0000\u0000\u0000\u0007\u0000\u0000\u0000\u0007\u0000\u0000\u0000�\u0000\n\u0000\u0000\u0000\b\u0000\u0000\u0000\b\u0000\u0000\u0000~\u0002\n\u0000\u0001\u0000\u0000\u0000\u0000\u0000\n\u0000\u0000\u0000�\u0000\n\u0000\u0001\u0000\u0001\u0000\u0000\u0000\t\u0000\u0000\u0000\u0003\u0002\u000e\u0000\u0001\u0000\u0002\u0000\u0011\u0000\u0000\u0000\u0000\u0000@\u001e�@�\u0000\n\u0000\u0001\u0000\u0003\u0000\u0000\u0000\n\u0000\u0000\u0000\u0003\u0002\u000e\u0000\u0001\u0000\u0004\u0000\u0000\u0000\u0000\u0000\u0000\u0000��A�\u0000\n\u0000\u0001\u0000\u0005\u0000\u0000\u0000\u000b\u0000\u0000\u0000\u0003\u0002\u000e\u0000\u0001\u0000\u0006\u0000\u0011\u0000\u0000\u0000\u0000\u0000`\u001c�@~\u0002\n\u0000\u0001\u0000\u0007\u0000\u0000\u0000�\u0003\u0000\u0000~\u0002\n\u0000\u0001\u0000\b\u0000\u0000\u0000\u001a\u0000\u0000\u0000~\u0002\n\u0000\u0002\u0000\u0000\u0000\u0000\u0000\u000e\u0000\u0000\u0000�\u0000\n\u0000\u0002\u0000\u0001\u0000\u0000\u0000\f\u0000\u0000\u0000\u0003\u0002\u000e\u0000\u0002\u0000\u0002\u0000\u0011\u0000\u0000\u0000\u0000\u0000@\u001e�@�\u0000\n\u0000\u0002\u0000\u0003\u0000\u0000\u0000\r\u0000\u0000\u0000\u0003\u0002\u000e\u0000\u0002\u0000\u0004\u0000\u0000\u0000\u0000\u0000\u0000 _��A�\u0000\n\u0000\u0002\u0000\u0005\u0000\u0000\u0000\u000e\u0000\u0000\u0000\u0003\u0002\u000e\u0000\u0002\u0000\u0006\u0000\u0011\u0000\u0000\u0000\u0000\u0000`\u001c�@~\u0002\n\u0000\u0002\u0000\u0007\u0000\u0000\u0000�\u0007\u0000\u0000~\u0002\n\u0000\u0002\u0000\b\u0000\u0000\u0000\n\u0000\u0000\u0000~\u0002\n\u0000\u0003\u0000\u0000\u0000\u0000\u0000&\u0000\u0000\u0000�\u0000\n\u0000\u0003\u0000\u0001\u0000\u0000\u0000\u000f\u0000\u0000\u0000\u0003\u0002\u000e\u0000\u0003\u0000\u0002\u0000\u0011\u0000\u0000\u0000\u0000\u0000 \u001e�@�\u0000\n\u0000\u0003\u0000\u0003\u0000\u0000\u0000\r\u0000\u0000\u0000\u0003\u0002\u000e\u0000\u0003\u0000\u0004\u0000\u0000\u0000\u0000\u0000\u0000\u0000eͽA�\u0000\n\u0000\u0003\u0000\u0005\u0000\u0000\u0000\u0010\u0000\u0000\u0000\u0003\u0002\u000e\u0000\u0003\u0000\u0006\u0000\u0011\u0000\u0000\u0000\u0000\u0000�\u001c�@~\u0002\n\u0000\u0003\u0000\u0007\u0000\u0000\u0000\u0003\u0000\u0000\u0000~\u0002\n\u0000\u0003\u0000\b\u0000\u0000\u0000\u0002\u0000\u0000\u0000>\u0002\u0012\u0000�\u0007\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000�\u0000\"\u0000\t\u0000d\u0000\u0001\u0000\u0001\u0000\u0001\u0000\u0002\u0000,\u0001,\u0001\u0000\u0000\u0000\u0000\u0000\u0000�?\u0000\u0000\u0000\u0000\u0000\u0000�?\u0001\u0000(\u0000\b\u0000\u0000\u0000\u0000\u0000\u0000\u0000�?&\u0000\b\u0000\u0000\u0000\u0000\u0000\u0000\u0000�?'\u0000\b\u0000\u0000\u0000\u0000\u0000\u0000\u0000�?)\u0000\b\u0000\u0000\u0000\u0000\u0000\u0000\u0000�?\n\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000R\u0000o\u0000o\u0000t\u0000 \u0000E\u0000n\u0000t\u0000r\u0000y\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0016\u0000\u0005\u0001��������\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000;\t\u0000\u0000\u0000\u0000\u0000\u0000W\u0000o\u0000r\u0000k\u0000b\u0000o\u0000o\u0000k\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0012\u0000\u0002\u0001������������\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000�Υq;�\u0001\u0000�Υq;�\u0001\u0000\u0000\u0000\u0000;\t\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u0002\u0000\u0000\u0000\u0003\u0000\u0000\u0000\u0004\u0000\u0000\u0000\u0005\u0000\u0000\u0000\u0006\u0000\u0000\u0000\u0007\u0000\u0000\u0000\b\u0000\u0000\u0000\t\u0000\u0000\u0000\n\u0000\u0000\u0000\u000b\u0000\u0000\u0000\f\u0000\u0000\u0000\r\u0000\u0000\u0000\u000e\u0000\u0000\u0000\u000f\u0000\u0000\u0000\u0010\u0000\u0000\u0000\u0011\u0000\u0000\u0000\u0012\u0000\u0000\u0000\u0013\u0000\u0000\u0000\u0014\u0000\u0000\u0000\u0015\u0000\u0000\u0000\u0016\u0000\u0000\u0000\u0017\u0000\u0000\u0000\u0018\u0000\u0000\u0000\u0019\u0000\u0000\u0000\u001a\u0000\u0000\u0000\u001b\u0000\u0000\u0000\u001c\u0000\u0000\u0000\u001d\u0000\u0000\u0000\u001e\u0000\u0000\u0000\u001f\u0000\u0000\u0000 \u0000\u0000\u0000!\u0000\u0000\u0000\"\u0000\u0000\u0000#\u0000\u0000\u0000$\u0000\u0000\u0000��������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������\u0001\u0000\u0000\u0000\u0002\u0000\u0000\u0000\u0003\u0000\u0000\u0000\u0004\u0000\u0000\u0000����������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Rating",
+			"item": [
+				{
+					"name": "Create a rating by intervew (student)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJleHAiOjE3MDM4NDM4NzcsImFsZyI6IkhTMjU2In0.eyJ1c2VyTmFtZSI6IlNWMDEiLCJhY2NvdW50Q29kZSI6MTcsInN0dWRlbnRDb2RlIjoiU1YwMSIsIm5hbWUiOiJOZ3V54buFbiBNaW5oIEFuaCIsInJvbGUiOmZhbHNlfQ.YPpdjlDdEy924Kvqk35OF8_T6zYV0itNmNUPl1nmk88",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "ratingStar",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "123456",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/rating/2/SV06",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"rating",
+								"2",
+								"SV06"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all rating by activity (ad)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJleHAiOjE3MDM4NjkwNDQsImFsZyI6IkhTMjU2In0.eyJ1c2VyTmFtZSI6IkFETUlOIiwiYWNjb3VudENvZGUiOjEsInN0dWRlbnRDb2RlIjpudWxsLCJuYW1lIjoiYWRtaW4iLCJyb2xlIjp0cnVlfQ.VVgKjB93prV1Rha53eFdeByXimJjcANeETVUC6eXbCI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/rating/admin/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"rating",
+								"admin",
+								"2"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "Anh",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Student Activity",
+			"item": [
+				{
+					"name": "Add student to activity (ad)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJleHAiOjE3MDM2NzY4NjMsImFsZyI6IkhTMjU2In0.eyJ1c2VyTmFtZSI6IkFETUlOIiwiYWNjb3VudENvZGUiOjEsInN0dWRlbnRDb2RlIjpudWxsLCJuYW1lIjoiYWRtaW4iLCJyb2xlIjp0cnVlfQ.jywovYnptPmfgo9reU3G60Wx_JmJ9ip5KWrYXONET80",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"studentCode\": [\"SV01\", \"SV02\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/activities/admin/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"activities",
+								"admin",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get student by activity (ad)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/activities/admin/2/selected-volunteer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"activities",
+								"admin",
+								"2",
+								"selected-volunteer"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "Anh",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
